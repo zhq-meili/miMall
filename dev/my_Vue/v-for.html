@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <ul>
+            <!-- <li v-for="(person, index) in persons"> {{ person.name }}{{index}} </li> -->
+            <!--每一项和索引-->
+
+            <li v-for="(val,key,index) in person"> {{ index }} - {{ key }}: {{val }} </li>
+            <!--for in 遍历对象，值键索引-->
+        </ul>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script>
+    var vue=new Vue({
+        el:"#app",
+        data:{
+            persons: [
+				{ name: "岚枫秋秋"},
+				{ name: 'Json'}
+			],
+            person:{
+                name:'小1',
+                age:2,
+                sex:'女'
+            }
+        }
+    })
+
+</script>
+</html>

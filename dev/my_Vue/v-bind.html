@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind</title>
+</head>
+<body>
+    <div id="el">
+        <a :href="data_href">点击一下</a>
+        <div v-if="ok">yes</div><!--v-if=“xx”绑定一个vue定义的数据-->
+        <div v-else-if="check">no1</div>
+        <div v-else>厉害</div>
+
+        <!-- <img :src="imgSrc" alt=""> -->
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script>
+var vue=new Vue({
+    el:'#el',
+    data:{
+        data_href:"https://www.baidu.com",//v-bind:绑定元素属性和data里面的数据
+        imgSrc:"https://cn.vuejs.org/images/logo.png",//对象里的属性可以不加引号
+        choose:undefined,//''等同于false,undefined==false,null==false
+        check:0,//0等于false
+        ok:1
+    }//$("a").val("#")           
+})
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <vuecomp v-for="(item,index) of vegetables" v-bind:eat="item">{{index}}</vuecomp> 
+        <!-- <vuecomp></vuecomp>  -->
+
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script>
+     Vue.component("vuecomp",{
+        template:"<h1>nacy!{{eat.text}}</h1>",
+        props:['eat']//props自定义一个属性去接收父组件中的数据
+    })
+    var vue=new Vue({
+        el:"#box",
+        data:{
+            vegetables:[
+                {id:0,text:'香菜'},
+                {id:1,text:'土豆'},
+                {id:2,text:'红烧肉'},
+
+            ]
+        }
+    })
+   
+</script>
+</html>
