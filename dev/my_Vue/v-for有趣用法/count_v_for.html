@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+    <ul>
+        <li v-for="(item,index) of 5">{{index}}</li> 
+        <!--v-for写在循环显示的元素上-->
+    </ul>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script>
+    var vue=new Vue({
+        el:".box",
+        data:{
+            person:["a","b","c"]
+        }
+    })
+</script>
+</html>

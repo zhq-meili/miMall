@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" v-model="inputVal">
+        <button v-on:click="btnClick">按钮+1</button>
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script>
+    var vue=new Vue({
+        el:"#box",
+        data:{
+            inputVal:1
+        },
+        methods:{
+            btnClick:function(){
+                this.inputVal++;
+            }
+        }
+
+    })
+</script>
+</html>
